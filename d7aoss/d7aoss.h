@@ -20,6 +20,8 @@
 
 #if RAL_IMPLEMENTATION == stub_ral
 #	include "ral/stub/stub_ral.h"
+#if RAL_IMPLEMENTATION == cc1101_ral
+#	include "ral/cc1101/cc1101_ral.h"
 #elif RAL_IMPLEMENTATION == cc430_ral
 #	include "ral/cc430/cc430_ral.h"
 #endif
