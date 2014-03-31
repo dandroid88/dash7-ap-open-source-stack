@@ -16,7 +16,7 @@ extern "C" {
 #include <stdbool.h>
 #include <stdint.h>
 
-#include "phy.h"
+#include "../phy.h"
 #include "cc1101_core.h"
 #include "cc1101_registers.h"
 

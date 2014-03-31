@@ -122,7 +122,7 @@ int main(void) {
 			timer_add_event(&event);
 		}
 
-		system_lowpower_mode(3,1);
+		system_lowpower_mode(1,1);
 	}
 }
 

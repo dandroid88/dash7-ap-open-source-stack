@@ -26,7 +26,10 @@
 #define BUFFER_SIZE 50
 static char buffer[BUFFER_SIZE];
 
+//TODO: fix no hook for other compilers
+#ifdef __TI_COMPILER_VERSION__
 #pragma NO_HOOKS(log_print_string)
+#endif
 void log_print_string(char* format, ...)
 {
     va_list args;
@@ -40,7 +43,9 @@ void log_print_string(char* format, ...)
 	uart_transmit_message((unsigned char*) buffer, len);
 }
 
+#ifdef __TI_COMPILER_VERSION__
 #pragma NO_HOOKS(log_print_stack_string)
+#endif
 void log_print_stack_string(char type, char* format, ...)
 {
     va_list args;
@@ -55,7 +60,9 @@ void log_print_stack_string(char type, char* format, ...)
 	uart_transmit_message((unsigned char*) buffer, len);
 }
 
+#ifdef __TI_COMPILER_VERSION__
 #pragma NO_HOOKS(log_print_trace)
+#endif
 void log_print_trace(char* format, ...)
 {
 	va_list args;

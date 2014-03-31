@@ -202,7 +202,7 @@ static void rx_callback(phy_rx_data_t* res)
 		dll_foreground_frame_t* frame = (dll_foreground_frame_t*)frame_data;
 		frame->length = res->data[0];
 
-		frame->frame_header.tx_eirp = res->data[1] * 0.5 - 40;
+		frame->frame_header.tx_eirp = (int8_t) (res->data[1] * 0.5 - 40);
 		frame->frame_header.subnet = res->data[2];
 		frame->frame_header.frame_ctl = res->data[3];
 

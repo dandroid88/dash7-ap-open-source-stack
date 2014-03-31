@@ -11,12 +11,12 @@
 #include <stdint.h>
 #include <string.h>
 
-#include "phy.h"
-#include "fec.h"
+#include "../phy.h"
+#include "../fec.h"
 #include "cc1101_phy.h"
 #include "cc1101_registers.h"
 #include "cc1101_constants.h"
-#include "../framework/log.h"
+#include "../../framework/log.h"
 
 #include "cc1101_core.h"
 //#include "radio_spi_hw.h"
