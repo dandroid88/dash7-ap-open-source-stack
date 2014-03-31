@@ -23,6 +23,8 @@
 
 #include "../system.h"
 #include "../leds.h"
+#include "../button.h"
+#include "../uart.h"
 
 uint8_t device_id[8]; // TODO: keep this as global?
 uint8_t virtual_id[2];
@@ -51,8 +53,8 @@ void system_init() {
         /* Initialize LED driver */
         led_init();
         
-	//button_init();
-	//uart_init();
+	button_init();
+	uart_init();
 }
 
 void system_watchdog_timer_stop() {
@@ -107,8 +109,7 @@ void system_lowpower_mode(unsigned char mode, unsigned char enableInterrupts) {
 	case 1:
 		EMU_EnterEM1();
 		break;
-	case 0:
-		EMU_EnterEM1();
+        case 0:
 	default:
 		break;
 	}

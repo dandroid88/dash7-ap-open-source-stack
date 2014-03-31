@@ -22,5 +22,10 @@
 
 #define LEDPORT gpioPortC
 
+#define INPUT1_PORT				gpioPortB
+#define INPUT1_PIN				0
+#define INPUT2_PORT				gpioPortB
+#define INPUT2_PIN				1
+
 
 #endif
